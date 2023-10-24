@@ -1,0 +1,14 @@
+SEND DATA BETWEEN PAGES
+        
+    CREATE MESSAGE:
+        1. Create a new class in "Messages" folder 
+        2. Implement the "ValueChangedMessage<MESSAGE_DATATYPE>" on it.
+        
+    RECEIVING PAGE:
+        1. Add "WeakReferenceMessenger.Default.Register(this);" to the receiving page
+        2. Implement the "IRecipient<MESSAGE NAME> interface on the receiving
+        3. After "IRecipient" is implemented in the "Recieve" method get the data from the "MESSAGE NAME.Value" property
+            
+    SENDING PAGE:
+        1. !!!Call "PageNavigation?.NavigateTo<RECEIVING PAGE>();" before sending the message!!!
+        2. Send the message using "WeakReferenceMessenger.Default.Send(new MESSAGE_NAME(MESSAGE_DATA_OBJECT));"

@@ -1,0 +1,57 @@
+// VIDEO: https://www.youtube.com/watch?v=NhG__BL8zFo&t=1s
+
+
+Xpath in Selenium
+===================
+//*[@id='value'] - Any Elements by id
+//*[@name='value']- Any Elements by name
+//*[text()='value']- any Elements by text
+//input[@id='value']- input Elements by id
+//div[text()='value']- input Elements by text
+//input[@id='value' and @name='value'] - two or more attributes
+//input[@id='value' or @name='value'] - two or more attributes
+//div[@id='value']/.. - one element up
+//div[@id='value']/input - one element down by tag
+//div[@id='value']/div/input - two element down by tag
+//div[@id='value']//input - any level inside the element
+//div[@id='value']//input[1] - first element inside an element wit tag
+//div[@id='value']//input[@id='value'] - element inside an element with tag and attribute
+Elements as attributes
+//div[@id='value']/..
+//*[div[@id='value']] 
+//div[@id='value']/../..
+//*[*[div[@id='value']]]
+
+Xpath Contains and Positions and more
+============================
+contains()
+starts-with()
+last() - tables
+position() - use checkboxes in tables
+count() - tables is an example
+
+Xpath Ignore Case and Whitespaces and more
+============================
+normalize-space() - example with spaces
+translate() - replace example
+not() - take any example
+floor() 
+round()
+string-length(string)
+substring-before(string1, string2)
+substring-after(string1, string2)
+
+Xpath Axes
+===========
+ancestor
+ancestor-or-self
+attribute
+child
+descendant
+descendant-or-self
+following
+following-sibling
+parent
+preceding
+preceding-sibling
+self

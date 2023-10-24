@@ -1,0 +1,6 @@
+ADDING A NEW PAGE
+       
+    1. Create the View as a WPF Control
+    2. Create a ViewModel as a C# Class
+    3. Add dependency to injector below
+    4. In App.xaml Link the View to the Model in the XAML

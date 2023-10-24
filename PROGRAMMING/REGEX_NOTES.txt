@@ -1,0 +1,62 @@
+- Tim Cory Basics [https://www.youtube.com/watch?v=R5BcHIMZMxc]
+- Greedy Vs Lazy [https://www.youtube.com/watch?v=H1X0a-KPfAc]
+- Matching but not including (look ahead / behind) [https://stackoverflow.com/questions/3926451/how-to-match-but-not-capture-part-of-a-regex]
+- Matching but not including (look ahead / behind) [https://www.youtube.com/watch?v=-A7AJAT1_Xk]
+- Really good explination [ https://www.youtube.com/watch?v=sa-TUpSx1JA ]
+- Really good explination of look arounds [ https://stackoverflow.com/questions/2973436/regex-lookahead-lookbehind-and-atomic-groups ]
+
+
+REGEX NOTES
+
+//////////////////////
+///// CHARACTERS /////
+//////////////////////
+. - Any Character Except New Line
+\d - Digit (0-9)
+\D - Not A Digit (0-9)
+\w - Word Character (a-z, A-Z, 0-9, _)
+\W - Not a Word Character
+\s - Whitespace (space, tab, newline)
+\S - Not Whitespace (space, tab, newline)
+\n - New line
+
+
+///////////////////
+///// ANCHORS /////
+///////////////////
+\b - Word Boundry
+\B - Not a Word Boundry
+^ - Beginning of a String
+$ - End of a String
+
+////////////////////
+///// GROUPING /////
+////////////////////
+[] - Matches Characters in brackets
+[^] - Matches Characters NOT in bracket
+| - Either Or
+() - Group
+
+///////////////////////
+///// QUANTIFIERS /////   NOTE: These are placed after the caracter you want to apply them to
+///////////////////////
+* - 0 or More
++ - 1 or More
+? - 0 or One
+{3} - Exact Number. Example \d{3} will match 3 numbers i.e. 456
+{3,4} - Range of number (Minimum, Maximum)
+{x,y} - Repeat low (x) to high (y) (no "y" means at least x, no ",y" means)
+(x|y) - Alternative - x or y
+
+////////////////////////
+///// LOOK AROUNDS /////
+////////////////////////
+A(?=B) - Find expression A where expression B follows
+A(?!B) - Find expression A where expression B does not follow
+(?<=B)A - Find expression A where expression B precedes:
+(?<!B)A - Find expression A where expression B does not precede
+
+\ - escape character
+
+
+
