@@ -47,7 +47,7 @@
 | Run script | `python3 <name>` |
   
 
-## **VI Editor**
+## **VIM Editor**
 | Description | Commands |
 | --- | --- |
 | Create new python file  |  `vi <name>` |
@@ -55,6 +55,8 @@
 | Enter Command Mode  |  i key |
 | Save and exit   |  Esc Key -> `:wq` |
 | Exit without saving  |  Esc Key -> `:q`  |
+| Use tabs Instead Of Spaces| Inside of VIM in command mode > ':set softtabstop=0 noexpandtab' |
+| Use Spaces Instead Of Tabs| Inside of VIM in command mode > ':set shiftwidth=4 smarttab' |
 
 ## **User Commands**
 | Description | Commands |
