@@ -122,10 +122,3 @@
 | Medium Access Control (MAC) | Defines the protocol for data transmission and access to the network medium |  
 | A Protocol | Defines rules for communication between computers i.e. TCP/UDP|  
 | TCP | Establishes 3-Way Handshake. Does not use public / private key. |  
-|  |  |  
-|  |  |  
-|  |  |  
-|  |  |  
-|  |  |  
-|  |  |  
-|  |  |  
