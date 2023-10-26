@@ -10,8 +10,15 @@
 | Session <BR> (Host Layer) | Data: Data <BR> Interhost Communication |
 | Transport <BR> (Host Layer) | Data: Segments <BR> End-to-End Connections and Reliability |
 | Network <BR> (Media Layer) | Data: Packets <BR> Path Determination and IP (Logical Addressing)
-| Data Link <BR> (Media Layer) | Data: Frames <BR> MAC and LLC (Physical Addressing) |
+| Data Link <BR> (Media Layer) | Data: Frames <BR> MAC and LLC (Physical Addressing) <BR> SubLayers: Logical Link Control, Median Access Control |
 | Physical <BR> (Media Layer) | Data: Bits <BR> Media, Signal, and Binary Transmission | 
+
+### **TRANSMISSION PROTOCOL**
+
+| Term | Description |  
+| ------- | ----------- | 
+|  ARP | Address Resolution Protocol <BR> It is a request to get the MAC address for the IP address. This is because switches use MAC addresses and not IP addresses. This request is sent to the whole network.|
+
 
 ### **SECURITY TERMINOLOGY**
 | Term | Description |  
@@ -84,7 +91,41 @@
     - because it uses 2 of the 3 factors we have discussed: 
         - *something you know* and 
         - *something you have*
-        
+
 ## **MODULE 2**
+
+### **TYPES OF ATTACKS**
 | Term | Description |  
 | ------- | ----------- |  
+| MAC Spoofing | Attack impersonates another machine |
+| ARP Spoofing | An attacker sends fake ARP (Address Resolution Protocol) messages to a local network, aiming to associate their MAC address with the IP address of another host. |
+| Denial of Service Attack | Send large number of packets to host providing service |
+| IP Spoofing | Is an attempt by an intruder to send packts from one IP address that appear to originate at another |
+| SYN Flood | Send TCP connection requests faster than a server can process |
+| TCP Session Hijacking | Using a combination of injected code and IP Spoofing this attack has a malicious client take over session. |
+
+### **ATTACK LEVEL IN OSI MODEL**
+| Layer | Description |  
+| ------- | ----------- |  
+| Application | - |
+| Presentation | - |
+| Session | - |
+| Transport | TCP Hijacking <BR> Syn Flood|
+| Network | DDOS <BR> IP Spoofing |
+| Data Link | MAC Spoofing <BR> ARP Spoofing|
+| Physical  | - | 
+
+| Layer | Description |  
+| ------- | ----------- |  
+| Network Interface | Device connecting computer to a network. |  
+| Logical Link Layer (LLC) | Services for flow control, Acknowledgments, and correcting physical errors |  
+| Medium Access Control (MAC) | Defines the protocol for data transmission and access to the network medium |  
+| A Protocol | Defines rules for communication between computers i.e. TCP/UDP|  
+| TCP | Establishes 3-Way Handshake. Does not use public / private key. |  
+|  |  |  
+|  |  |  
+|  |  |  
+|  |  |  
+|  |  |  
+|  |  |  
+|  |  |  
