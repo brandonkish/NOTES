@@ -122,3 +122,38 @@
 | Medium Access Control (MAC) | Defines the protocol for data transmission and access to the network medium |  
 | A Protocol | Defines rules for communication between computers i.e. TCP/UDP|  
 | TCP | Establishes 3-Way Handshake. Does not use public / private key. |  
+
+## **MODULE 3**
+
+| Layer | Description |  
+| ------- | ----------- |  
+| OSI Acranym| All (Application) <BR> People (Presentation) <BR> Seem (Session) <BR> To (Transport)  <BR> Need (Network) <BR> Data (Data Link) <BR> Processing (Physical) |
+| Blacklist | A firewall rule set that allows all packets through except for those specified identified as originating from network addresses specified in a list |
+| Whitelist | A firewall  rule set with a default-deny policy that rejects packets unless specifically allowed. |
+| DevOPs  | Collaborative effort to improve the quality and velocity of the service life cycle |
+| Cultural Priorities of DevOps | Collaborative, Transparent, Change Oriented | 
+| Developers Focus On | Earlier phases of life cycles |
+| Operations Focuses On | Later phases of life cycle |
+| Cyber Security Is | The practice of defending and protecting data from malicious attacks |
+| Network Security | Securing networks from intruders |
+| Application Security | Keeping software devices free from threats |
+| Information Security | Protects the integrity and privacy of data, both in storage and in transit |
+| Operational Security | Handle and protect data assets; training of end-users on operating systems |
+| Consider Developing A | Security life cycle model |
+| Automate | Almost Everything |
+| Defense in Depth | Multiple layers of security controls |
+| Strong authentication | To degrade the adversaries' ability to maneuver on information networks |
+| Device Hardening | Reduce internal and external attack vectors |
+| Risk Management Framework (RMF) | Criteria dictates US government IT systems must be architected, secured and monitored |
+| Sec in DevSecOps | Security |
+
+### **Department Of Defense (DoD) Cybersecurity Concepts**
+
+| Term | Description |  
+| ------- | ----------- |  
+| Defense in Depth | Multiple layers of security controls |
+| Strong Authentication | To degrade the adversaries' ability to maneuver on information networks |
+| Device Hardening | Reduce internal and external attack vectors |
+| Risk Management Framework (RMF) 6-Step Process | 0. Prepare <BR> 1. Categorization of information systems  <BR> 2. Selection of security controls  <BR> 3. implementation of security controls  <BR> 4. Assessment of security controls  <BR> 5. Authorization of information systems  <BR> 6. Monitoring of security controls |
+
+![](Mod3 - Figure 1.GIF)
