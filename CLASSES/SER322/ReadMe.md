@@ -146,6 +146,18 @@
 | Device Hardening | Reduce internal and external attack vectors |
 | Risk Management Framework (RMF) | Criteria dictates US government IT systems must be architected, secured and monitored |
 | Sec in DevSecOps | Security |
+| Applying User Stories is Difficult Because | - It is hard not to write them in the negative <BR> - They are hard to consider in isolation <BR> - A security user story does not directly produce business value <BR>|
+| Standards & Requirements | It depends if requirements can be considered standards |
+| ISF | Goals <BR> - Analysis <BR> - Research <BR> - Dissemination|
+| Security Controls | Countermeasures prescribed for an information system to protect CIA |
+| Certification | Independent body asserts with written assurance the product meets specific requirements |
+| Differences From Other Software Engineering | - An attacker has knowledge of system weaknesses <BR> - An attacker may conceal the cause of a system failure <BR> - An attacker may want you to shut down the system <BR> - An attacker may probe controls over time to discover vulnerabilities
+| Identification Requirements | If or not a system should identify its user before interacting with them |
+| Authentication & Authorization Requirements | How users are identified & specifies privileges & permissions on resources |
+| Use Case | Describes sequences of events between an actor and a system, yields value positively towards actor|
+
+
+
 
 ### **Department Of Defense (DoD) Cybersecurity Concepts**
 
@@ -154,6 +166,54 @@
 | Defense in Depth | Multiple layers of security controls |
 | Strong Authentication | To degrade the adversaries' ability to maneuver on information networks |
 | Device Hardening | Reduce internal and external attack vectors |
-| Risk Management Framework (RMF) 6-Step Process | 0. Prepare <BR> 1. Categorization of information systems  <BR> 2. Selection of security controls  <BR> 3. implementation of security controls  <BR> 4. Assessment of security controls  <BR> 5. Authorization of information systems  <BR> 6. Monitoring of security controls |
+| Risk Management Framework (RMF) 6-Step Process | 0. Prepare <BR> 1. Categorization of information systems  <BR> 2. Selection of security controls  <BR> 3. implementation of security controls  <BR> 4. Assessment of security controls  <BR> 5. Authorization of information systems  <BR> 6. Monitoring of security controls <BR> A security user story should not be discarded. |
 
-![](Mod3 - Figure 1.GIF)
+
+
+![](mod3img1.gif)
+
+### **Types of Security Requirements**
+
+| Term | Description |  
+| ------- | ----------- |  
+| Identification Requirements | Whether or not a system should identify its users before interacting with them |
+| Authentication & Authorization Requirements | Authentication is how users are identified & Authorization specifies privileges & permissions on resources |
+| Immunity Requirements | how a system protects itself from viruses, worms, and similar threats. |
+| Integrity Requirements | How data corruption can be avoided |
+| Intrusion Detection Requirements | Specify what mechanisms should be used to detect attacks |
+| Non-repudiation Requirements | Specify what mechanisms should be used to detect attacks |
+| Privacy Requirements | How data privacy is maintained |
+| Security Auditing Requirements | How can the system be audited and checked |
+| System Maintenance Security Requirements | Prevent unauthorized changes to the system (and software) intended to defat existing security mechanisms |
+
+### **Misuse Cases**
+
+| Term | Description |  
+| ------- | ----------- | 
+| Misuse Case | Instances of threats to a system |
+| Interception Threats | Attacker gains access to an asset |
+| Interruption Threats | Attacker makes part of a system unavailable |
+| Modification Threats | A system asset if tampered with |
+| Fabrication Threats | False information is added to a system |
+
+### **ISO/IEC 2700 Security Standards**
+
+| Term | Description |  
+| ------- | ----------- | 
+| ISO/IEC 2700 Security Standards | - Deals with ISMSs <BR> - Information Security Management System: <BR> - Consists of policies, procedures, guidelines, resources and activities <BR> Collectively managed by an organization to protect information assets <BR> - Based upon a risk assessment and the organization's risk acceptance levels designed to effectively treat mange risks. |
+| ISMS | A systematic approach for establishing, implementing, operating, monitoring, reviewing, maintaining and improving an organization's information security to achieve business objectives|
+| Requirement Standards (5.3) | Outlines mandatory criteria that must be met for compliance |
+| Sector-specific Guidelines Standards <BR> Clause (5.5) | Addresses unique challenges and provides guidelines tailored for specific sectors or industries  |
+| Guidelines Standards <BR> Clause (5.4) | Offers suggestions for achieving the mandatory requirements and provides guidance on the application of the standard.|
+|Vocabulary Standard <BR> Clause (5.2) | Ensures clarity by defining terms used throughout the standard. |
+
+### **Security Risk Assessment**
+
+| Term | Description |  
+| ------- | ----------- | 
+| Asset Identification | Identify key system assets or services that have to be protected |
+| Exposure Assessment | Assess the potential losses associated with each asset |
+| Threat Identification | Identify the most probable threats to the system assets |
+| Attack Assessment | Decompose threats into likely attacks on the system and ways they may occur |
+| Control Identification | Propose controls that may be put in place to protect an asset |
+| Feasibility Assessment | Assess the technical feasibility and cost of the controls |
