@@ -217,3 +217,35 @@
 | Attack Assessment | Decompose threats into likely attacks on the system and ways they may occur |
 | Control Identification | Propose controls that may be put in place to protect an asset |
 | Feasibility Assessment | Assess the technical feasibility and cost of the controls |
+
+## **MODULE 4**
+
+### **ISO Clauses**
+| Term | Description |  
+| ------- | ----------- | 
+|Sector-specific guidelines standards clause 5.5 | Adresses unique challenges and provides guidelines tailored for specific sectors or industries.
+|Guidelines standards clause 5.4 | Offers suggestions for achieving the mandatory requirements and provides guidance on the application of the standard |
+|Vocabulary standard clause 5.2 | Ensures clarity by defining gterms used through the standard |
+| Requirement standards clause 5.3 | Outlines mandatory criteria that must be met for compliance. |
+
+
+| Term | Description |  
+| ------- | ----------- | 
+|Security is not a | feature property, it is an emergent property |
+|Security testing | Is trying to break the system not repair the system  <br> Find unexpected, or intentional misuses of the application <br> is a risk-based method |
+| Vulnerability | A weakness in the system that can permit an attack to access the system |
+| Attack| An attempt to gain un authorized accessories system information or resources |
+| Exploit | Software tool/recipe for using a vulnerability to compromise the system security <BR> ** The too used to perform the hacking ** |
+| Attack Pattern | describe a common sets of methods to attack msystems in a more abstract from |
+| Attack Surface| Set of ways that a system can be attacked <br> ** What the hacker does to perform the attack ** |
+| White Box Testing | Tester knows all information about system |
+| Black Box testing | Tester only knows input or output of system |
+| Grey Box testing | Tester knows some of the system but not the whole system |
+| Security Testing | Use risk analysis to build tests. |
+| Penetration Testing | Test software in deployed environment by attacking it |
+| Equivalence Class Testing | divide input data into partitions to streamline tests, test the same thing |
+| Fuzz Testing | Wel-formed inputs are randomly changed and used for testing |
+| Secure testing | Doing the functionallity testing <br> Looking for injections of flaws overflows <br> used to break the code not repair. <br> Security defects and vulnerabilities aren't related to security functionality. <br> Find unexpected or untentional misuses of the application|
+| Functional testing | Going to see when the program actually runs <BR> Used to repair |
+
+![Image](mod4img1.gif "Image2")
