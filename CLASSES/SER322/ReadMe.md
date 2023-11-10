@@ -248,4 +248,68 @@
 | Secure testing | Doing the functionallity testing <br> Looking for injections of flaws overflows <br> used to break the code not repair. <br> Security defects and vulnerabilities aren't related to security functionality. <br> Find unexpected or untentional misuses of the application|
 | Functional testing | Going to see when the program actually runs <BR> Used to repair |
 
-![Image](mod4img1.gif "Image2")
+![Image](mod4img1.gif "Image1")
+
+| Term | Description |  
+| ------- | ----------- | 
+| Pen Testing | breaking into the system (With permission) to uncover security weaknesses <br> Not risk analysis based |
+| Experience Testing | ad hock method of testing based on the testers experience. <br> kind of like guessing |
+| Static Analysis | Analyzing the code without actually running the code <br> tests your codes through scanning <br> Quality of code is increased <br> finding errors earlier reducing cost <br> does not need to be complete and does not need to be executable. |
+| Shift Left | The practice of integrating testing activities earlier in the SDLC <br> Early detection, improved quality and cost efficiency.|
+|SAST| Static analysis for security testing |
+| What is Sound | logical |
+| Dynamic Analysis | Analysis on complete compiled executable code |
+| Penetration Testing | Looking for security faults by breaking into the system with malignant intent (Playing hacker) |
+|Experience Testing | ad hoc method of testing based on the testers experience (Guessing) |
+
+| Term | Description |  
+| ------- | ----------- |
+|Manual Code Analysis | Reviewer walks through each ine of code manually. |
+|Static Code Analysis | Done without executing the code |
+|Dynamic Code Analysis | done while program is executing |
+|False Negative | The program contains bus that the tool / process doesn't report  <br> contains a bug that it does not report |
+| false positive | Tool / process reports bug that the program doesn't really contain <br> there but doesn't report it |
+| A tool is sound if | for  a given set of assumptions, it produces no false negatives. |
+| A Code Review | A specialized task to assess code base for security related weaknesses |
+
+
+### **Static Code Analysis**
+
+| Term | Description |  
+| ------- | ----------- |
+|Advantage| No requirements of executing target programs |
+|Advantage| Sound to describe properties of programs
+|Advantage| easily integrated into the whole software development cycle |
+|Advantage| faster than manual code analysis |
+|Disadvantage | not enough precise enough to describe program properties |
+|Disadvantage |  high false positive |
+|Disadvantage |  need human to verify the results and cannot be entirely automatic |
+|Disadvantage | most methods depend on source code |
+|Disadvantage |  unable to detect design bugs and vulnerabilities cause by configurations or environment. |
+||Disadvantage | find bugs based on the rule set of the tool. i.e. the tool will have a predefined set of vulnerabilities scan for . (Leads to blind spots.)
+
+### **Manual Code Analysis**
+| Term | Description |  
+| ------- | ----------- |
+| Advantage | Can outperform automated analysis tools for security if done correctly
+| Advantage | low false positive |
+| Disadvantage | can be time consuming, more than 10k-15k LoC can be analyzed |
+| Disadvantage | Typically requires an expert to audit the code. |
+
+### **Dynamic Code Analysis**
+
+| Term | Description |  
+| ------- | ----------- |
+| Advantage | no false positive |
+| Advantage | vulnerability discovery equal to vulnerability exploit |
+| Disadvantage | code base has to be abe to compile and execute to scan effectively. |
+| Disadvantage | May do harm to the system being tested due to code has to be in the execution phase |
+
+![Image](mod4img2.gif "Image2")
+| Term | Description |  
+| ------- | ----------- |
+| Formal | A heavy process review with multiple participant meeting together in single room. a "moderator" and keeps everyone on task, controls the pace and acts as arbiter of disputes. Everyone reads through the material beforehand to properly prepare |
+|Over-The-Shoulder | A reviewer standing over the author's workstation while the author walks the reviewer through a  set of code changes. Typically the author "drives" the review by sitting at the keyboard and mouse, opening various files. pointing out the changes, and explaining why it was done this way.
+|Email Pass-Around | Whole files or changes are packaged up by the author and set to reviewers via e-mail. reviewers examine the files, ask questions and discuss with the author and other developers, and suggest changes.
+|Pair Programming| Two developers writing cod at a single workstation with only one developer typing at a time and continuous free-form discussion and review. |
+|Tool Assisted | A process where specialized tools are used in all aspects of the review; collecting files, transmitting and displaying giles, commentary and defects among all participants collecting metrics and giving product managers and administrators some control over the workflow. 
