@@ -24,7 +24,7 @@
 | See all docker images on system  | `docker images` |
 | Show all running dockers  | `docker ps` |
 | Show all docker networks up  | `docker network ls` |
-| Enter a docker container  | `docker exec -it <container name> /bin/sh` |
+| Enter a docker container  | `docker exec -it <container ID> /bin/sh` <br> `docker -it <container ID> bash`|
 | Get docker container IP  | in docker container -> `ifconfig` |
 | ???  | `docker volume ls` |
 | ???  | `docker network inspect` |
