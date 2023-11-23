@@ -281,6 +281,7 @@
 |Advantage| Sound to describe properties of programs
 |Advantage| easily integrated into the whole software development cycle |
 |Advantage| faster than manual code analysis |
+|Advantage| Can out perform automated analysis tools for security if done correctly |
 |Disadvantage | not enough precise enough to describe program properties |
 |Disadvantage |  high false positive |
 |Disadvantage |  need human to verify the results and cannot be entirely automatic |
@@ -292,16 +293,17 @@
 | Term | Description |  
 | ------- | ----------- |
 | Advantage | Can outperform automated analysis tools for security if done correctly
-| Advantage | low false positive |
+| Advantage | no false positive |
 | Disadvantage | can be time consuming, more than 10k-15k LoC can be analyzed |
 | Disadvantage | Typically requires an expert to audit the code. |
+| Disadvantage | Unable to detect design bugs and vulnerabilites cause by configurations or environment |
 
 ### **Dynamic Code Analysis**
 
 | Term | Description |  
 | ------- | ----------- |
-| Advantage | no false positive |
 | Advantage | vulnerability discovery equal to vulnerability exploit |
+| Advantage | No requirements of executing target programs |
 | Disadvantage | code base has to be abe to compile and execute to scan effectively. |
 | Disadvantage | May do harm to the system being tested due to code has to be in the execution phase |
 
@@ -313,3 +315,146 @@
 |Email Pass-Around | Whole files or changes are packaged up by the author and set to reviewers via e-mail. reviewers examine the files, ask questions and discuss with the author and other developers, and suggest changes.
 |Pair Programming| Two developers writing cod at a single workstation with only one developer typing at a time and continuous free-form discussion and review. |
 |Tool Assisted | A process where specialized tools are used in all aspects of the review; collecting files, transmitting and displaying giles, commentary and defects among all participants collecting metrics and giving product managers and administrators some control over the workflow. 
+
+## **MODULE 5**
+
+| Term | Description |  
+| ------- | ----------- |
+| Manual Code Analysis | Reviwer walks through each line of code manually |
+| Static Code Analysis | Done without executing the code|
+| Dynamic Code Analysis | Done while program is executing|
+
+
+| Term | Description |  
+| ------- | ----------- |
+| Compiler | Translates source code to object code native to the CPU type |
+| Linker | Creates the executeable bundle |
+| The loader | Loads executeable bundle into memory and resolve the logical ref into concrete memory addresses |
+| Kernal |Core component of the OS, Handing the management of low-level hardware resources | 
+| System Calls | Functions use dby a progam to request services from the operating system's kernel |
+| Library | Allows applications to use a predefined series of APIs that define the functions for communicating with the kernel |
+| Process |An instance of a program that is currently executing |
+| The Program Code Section | Stores executeable program instructions of execution by the CPU|
+| Program data section |Stores program variables that aren't local to functions|
+| Program Stack Section| Stores currently executing functions, and keeps track of the chain of function calls|
+| Vigilance | Required for the Operating System Monitoring|
+| Dynamic Analysis of Programs | Monitored execution of a program in order to perform analysis |
+|Kernel Definition| The core component of the OS, handling the management of low-level hardware resources, including memory, processors, and input/output (I/O) devices, such as a keyboard, mouse, or video display. <BR> <BR> Most OSs define the tasks associated with the kernel in terms of a layer metoaphor, with the hardware components, such as the CPU, memory and input/output devices being on the bottom, and the users and applications being on the top.|
+
+
+### **Dynamic Code Analysis**
+
+| Term | Description |  
+| ------- | ----------- |
+| Dynamic Analysis of Programs | Monitored execution of a program in order to perform analysis <BR> Often comes after static analysis is complete or to complement static analysis activities |
+| Positives | Efficient way to determine program functionality, i.e. File activity, process creation, etc. |
+| Drawbacks | Not all functional paths maybe be explored |
+| Techniques | Debuggers <BR> Runtime analyzers <BR>  Trace Programs <BR>  String analyzers <BR> Advanced tools |
+
+| Term | Description |  
+| ------- | ----------- |
+| Debuggers | Software tools used by programmers to test and debug code. they allow the execution of a program to be started, paused, and stopped, and they enable the programmer to inspect and potentially modify the state (e.g. the values of variables) at various points during execution. Debuggers often provide functionality to set breakpoints and step through code line by line.|
+|Runtime Analyzers and Trace Programs | Used to observe the behavior of a program while it's running, often for the purpose of finding errors, monitoring system calls, or profiling resource usage like CPU and memory. These tools can help identify performance bottlenecks, memory leaks, and other inefficiencies. |
+| String Analyzer | Can help identify security vulnerabilities, such as format string vulnerabilities, improper input validation, and potential buffer overflows. Can analyze string to detect patterns indicative of malware, such as common obfuscation techniques. |
+|Call Graphs and Profilers| call graphs are visual or textual representations of calling relationships between functions in a program, showing which functions call which other functions. Profilers, on the other hand, help you determine the computational footprint of a module of executable code. | 
+| Injection Attacks | Most common and mos successful types of attacks |
+| Defend against injection attacks |  sanitize data, sandbox, execution environment |
+| Data Injection | Malicious data intended to circumvent parsers |
+| Command Injection | Attempt to run processes from existing program through injected command input |
+| Sanitizing Data | Clean and filter user input, prevent potentially harmful code from executing |
+| Sandboxing | allow code to run in a isolated environment where it can be tested |
+| SQL Injection | malicious SQL statements are inserted into an entry field for execution. |
+| Buffer Overflow Attack |Overwrite memory with malicious code and then forcing a jump to that  ode by overwriting the next instruction pointer |
+|Types Of Buffer Overflows | Stack <BR> Heap |
+|Counters to Buffer Overflow | Stack Canaries, non-executable memory, compiler-based techniques |
+| Canary | Placed in the stack prior to the return address, so that any attempt to overwrite the return address overwrites the Canary |
+
+
+### **Buffer Overflow Mitigation Strategies**
+
+| Term | Description |  
+| ------- | ----------- |
+| Canaries | A canary is a known value placed on the stack between local variables and control information like return address and frame pointers. When a function is about to return, the canaries value is checked. If it has been altered, a buffer overflow is suspected, and the program can take action to halt execution and prevent exploitation |
+| Non-Executable Stack Protection | Non-executeable stack protection is a security feature that marks the stack region of memory as non-executeable, meaning that if on overflow alters the return address to point to code within the stack, the system will not execute this code. |
+| Bounds Checking | Bounds checking is the process of verifying that every memory access respects the boundaries of the memory buffer allocated. This can prevent writing data past the allocated buffer, which would otherwise lead to a buffer overflow. Bounds checking can be performed by the compiler or at runtime. |
+| Memory Protection | Protection is a security feature that marks the stack region of memory as non executable memory
+
+### **Exception Handling Best Practices**
+| Term | Description |  
+| ------- | ----------- |
+| Use exceptions for exceptional circumstances | use if test for more frequent /expected circumstances <BR> Try/catch/finally blocks add overhead |
+| Use finally to clean up resources | Don't put resource clean up in the catch or finalize |
+|Resolve the problem as close to where the error occurs | Otherwise, propagate to calling routine ("Rethrow") |
+
+
+## **MODULE 6**
+| Term | Description |  
+| ------- | ----------- |
+| Canaries | A canary is a known value placed on the stack between local variables and control information like return addresses and frame pointers. When a function is about to return the canary value is checked. If it has been altered, a buffer overflow is suspected, and the program can take action to halt execution and prevent exploitation. |
+| Non-Executeable Stack Protection | Non-Executeable stack protection is a security feature that marks the stack region of memory as non executeable meaning that if an overflow alters the return address to point to code withing the stack, the system will not execute this code. |
+| Bounds Checking | Bounds checking is the process of verifying that every memory access respects the boundaries of the memory buffer allocated. This can prevent writing data past the allocated buffer, which would otherwise lead to a buffer overflow. Bounds checking can be performed by the compiler or at runtime.|
+
+### **Security Design Principles**
+
+| Term | Description |  
+| ------- | ----------- |
+| fail securely | Security design principle for systems <BR> when something fails, the system should place itself in a secure state. |
+| Establish secure defaults | Security design principle for systems <BR> Initial configuration of a system should have highest level of security settings by default. |
+| Defense in depth | Security design principle for systems <BR> Layer basic security practices to ensure overall safety of an application. |
+| Avoid Security by Obscurity | Security design principle for systems <BR> Don't rely on something being hard to find as being secure. |
+| Economy of mechanism | Sufficiently small and simple to be verified and implemented |
+| Complete Mediation | every access to every object must be checked before allowed to access|
+| Open Design | Open design allows many eyes on the software to protect it. |
+| Least Common Mechanism | Minimize the amount of mechanisms common to more than one user and dependant on all other users |
+| Psychological Acceptability | User interface must be easy to use so that they can perform the correct actions upon using it. |
+| Fail-safe Defaults | If the system fails it is still secure. System does not completely break if something fails. |  
+
+
+| Term | Description |  
+| ------- | ----------- |
+| Minimize the attack surface | more places to accept into the system creates greater risk of exploits <BR> More points of interaction = More difficult to defend|
+| Don't Trust Services | Don't make assumptions that can impact your application's security goals. <BR> Don't make assumptions that can impact your applications security goals. |
+| Keeping Security Simple | A security design that is easy to understand is usually more easily implemented.  <BR> The simpler the design of the security, the easier it is to understand and implement correctly. |
+| Fix Security Issues Correctly | Address security issues properly rather than using workarounds <BR> Avoid temporary workarounds or fixing just "surface issues". Explore root cause and areas where the issues may exists even in another form.|
+| Separation of Duties / Privilege | Access to objects should depend on more than one condition. <BR> Some combinations of permissions don't work well together.  <BR>  Access to objects should depend on more than one condition  <BR>  multifactor authentication  <BR> Two person rule|
+| Least Privilege | User/client should only have permissions they need for what they need to do.  <BR>  Not everyone should have access to everything. Even people or accounts you might thing should have access don't always need it.  <BR> Should only have the rights necessary to complete your task.  <BR>  Default should be no access  <BR> If access is needed temporarily, then it should be change dto deny the access right after use  <BR> Recall Host security Module 2:  <BR>  - Closed vs. Open policy  <BR>  - DAC vs MAC|
+| Software Architecture | Encompass set of significant decisions about the organization of a software system |
+| Domain-Specific Software Architectures (DSSA) | Assembly of software components specialized for a particular type of task  <BR> Tailored to specific application domains. THey encapsulate best practices, design decisions, and structural choices that are effective for a particular type of application or industry sector. |
+| Architectural Pattern | A set of architectural design decisions applicable to recurring problem.  <BR>  is a set of architectural design decisions applicable to a recurring problem. |
+| Architectural Style | Expresses a fundamental structural organization schema for software systems. Expresses a fundamental structural organization schema for software systems. |
+| Design Pattern | Is a catalog of low-level structural and process arrangements in code  <BR>  Is a catalog of low-level structural and process arrangements in code. |
+
+| Term | Description |  
+| ------- | ----------- |
+| Authentication | People are who they say they are |
+| Integrity | Can't change the data or code |
+| Non-repudiation | Can't undo something that they did |
+| confidentiality  | Can't look at data or information they are not allowed to look at |
+| Availability  | No denial of service |
+| Authorization | User able to run system at level of trust permitted |
+| Defensive Programming | Assume errors will happen |
+| Program by Contract | Data must be true precondition, post-condition will have a good output. <BR> Like checking for Null |
+| Rework  | teardown and build back up |
+| Refactor  | move low level piece around, create structural and interaction consistency  |
+| Retrofit | structures are already clean so you can move forward |
+
+### **STRIDE**
+
+| Threat | What We Want |  
+| ------- | ----------- |
+| Spoofing | Authentication |
+| Tampering | Integrity |
+| Repudiation | Nonrepudiation |
+| Information disclosure | Confidentiality |
+| Denial of Service | Availability |
+| Elevation of Privilege | Authorization |
+
+| Term | Description |  
+| ------- | ----------- |
+| Spoofing   | Property: Authentication <BR> Definition: Impersonating someone or something else <BR> Example: Pretending to be any of mjfiindle, asu.edu, or string.dll |
+| Tampering |  Property: Integrity <BR> Definition: Modifying code or data <BR> Example:  Modifying string.dll, or network packet|
+| Repudiation |  Property: Non-repudiation <BR> Definition: Claiming to not have performed an action <BR> Example: "I didn't send that e-mail", "I didn't modify that file" |
+| Information Disclosure |  Property: Confidentiality <BR> Definition: exposing information to someone not authorized to see it. <BR> Example:  reading source code, publishing list of customers information, doxing |
+| Denial of Service |  Property: Availability <BR> Definition: degrade or deny service <BR> Example: Crash windows/website, Routing packets into a "Black Hole" |
+| Elevation of privilege (EoP) |  Property: Authorization <BR> Definition: Gain unauthorized capabilities <BR> Example: Going from "guest" to "admin" |
+
