@@ -457,4 +457,29 @@
 | Information Disclosure |  Property: Confidentiality <BR> Definition: exposing information to someone not authorized to see it. <BR> Example:  reading source code, publishing list of customers information, doxing |
 | Denial of Service |  Property: Availability <BR> Definition: degrade or deny service <BR> Example: Crash windows/website, Routing packets into a "Black Hole" |
 | Elevation of privilege (EoP) |  Property: Authorization <BR> Definition: Gain unauthorized capabilities <BR> Example: Going from "guest" to "admin" |
+| An architectural style | Expresses a fundamental structural organization schema for software systems |
+| Microkernel | Supports systems with stable core functionality that must adapt to changing interface requirements |
+| plugin | Allows a system or framework to be extended |
+| blackboard | Multiple clients collaborate through shared, synchronized data access |
+| pipe-and-filter | data processing can be broken down into a series of sequential steps or stages |
 
+### **Patterns**
+
+| Threat | What We Want |  
+| ------- | ----------- |
+| Distrustful Decomposition | Vulnerability: A single vulnerability exposes a large-scale exploit. e.g. elevated privileges on a single executeable <BR> Control: Isolate vulnerabilities to a subset of the system components so exploit is limited (i.e. sandboxing)|
+| Privilege Separation | Vulnerability: Code requiring special privileges is often mixed with code not requiring such privileges  <BR> Control: Factor the code requiring special privileges into it own scope & separate multiple such blocks|
+| Defer to Kernel  | Vulnerability: Also concerned with elevated privileges, similar to Distrustful Decomposition  <BR> Control: Our principle of using system libraries instead of using executeable shell programs to access OS features |
+| Secure Logger | Vulnerability: Attackers can cover tracks or gain valuable system information from logs <BR> Control: Use encryption or an OTS secure logging facility. File permissions help but are defeatable. |
+| Clear Sensitive Information | Vulnerability: Attackers may probe for sensitive info from reused resources across the system (like DB connections) <BR> Control: Part of oru larger approach to secure default state, ensuring access only for time needed, worrying about not just input validation but post-processing outflow. |
+| Secure Directory | Vulnerability: Attackers may seek to modify files that a running program is using (Data at Rest -> Data in Use) <BR> Control:  Programs should use secured directories that have write permissions only by the process owner and root. |
+| pathname Cononicalization | Vulnerability: Attackers may exploit soft links or aliases to files or directories (turns into secure Directory) <BR> Control: Verify absolute paths to program-sensitive data, including checking for links (use canonical paths only) |
+| Input Validation |  Vulnerability: Root cause of our injection attacks <BR> Control: We have discussed many: sanitize, validation  |
+| Resource Acquisition Is initialization | Vulnerability:  Attackers will seek to exploit (shared) system resources. (de)allocation of such resources (RAM, files, sockets) must be managed carefully <BR> Control: All basically suggests ensuring you have identified places in the code for managing resource life cycle. Refactor to Creational patterns to isolate this code.   |
+| Single Access Point | Vulnerability: Attackers probe for multiple authentication points and possible forgotten back / open doors<BR> Control: Provide a single access point; use with Check Point and Session to manage per access authentication. |
+| Check Point |  Vulnerability: Legitimate users may encounter issues with Singe Access Point and need a recovery mechanism <BR> Control: I see this pattern as motivation for encapsulating security checks in an object for Safe Zone layer.  |
+| Roles |  Vulnerability: Authorization based on individual user credentials is difficult to maintain <BR> Control: Implement a consistent role-based security policy  |
+| Session |  Vulnerability: Multiuser/tenant apps have different users accessing features in the same set of objects. This creates an opportunity for attackers to spy on others' data <BR> Control: Instead of discrete event tracking across users, create a distinct Session object that encapsulates an operation history for each principle.  |
+| Full View with Errors |  Vulnerability: Staying with multiUser/tenant apps, do not reject operations in silence; use intention and raise alarms <BR>  Control: Apply the state pattern for intention to ensure an object is not compromised, and create visibility for other users is the system has been compromised.|
+| Limited View | Vulnerability: Interfaces should only expose allowable operations <BR> Control: Use the State pattern and Roles, apply Least Privilege principle to only allow access to valid operations |
+| Secure Access Layer | Vulnerability: There are many integration points for your application if you consider the operating system, other running processes, and possibly APIs/network calls. <BR> Control: Like UIs, Minimize the Attack Surface by minimizing the integration points in your code, and factor them into isolated code that can perform security checks. |
